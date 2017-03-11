@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="css/result.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=350px, user-scalable=1" />
+
+</head>
+
+<body>
+  <h1>You seem to be interested in many things but Tempus recommends you to take a look into the field of: </h1>
+  <h2 id="bestChoice"> </h2>
+
+  <p>
+    <span><a href="categories.html" id="explore"> Explore </a></span>
+  </p>
+
+
+  <script type="text/javascript">
+    var scoreString = window.sessionStorage.getItem("fields");
+    var fields = JSON.parse(scoreString);
+    console.log(fields)
+    function getCareerChoice(fields) {
+      var currentBiggestNumber = 0;
+      var currentBiggestCareer = "";
+      // Look through all of the careers in "field"s and see compare the values associated with them
+      for (var career in fields) {
+          // Check if the number associated with this career is greater than any number you have seen yet
+          if (currentBiggestNumber < fields[career]) {
+              currentBiggestNumber = fields[career]
+              currentBiggestCareer = career
+          }
+      }
+      return currentBiggestCareer
+      //console.log("The biggest career is " + currentBiggestCareer + " which has " + currentBiggestNumber) return currentBiggestCareer
+    };
+    
+    var yourCareer = getCareerChoice(fields);
+    console.log(yourCareer);
+    document.getElementById("bestChoice").textContent = yourCareer;
+    window.sessionStorage.setItem("career", yourCareer);
+  </script>
+  
+  <a href="home.html"><img src="icon.png" height="42" width="42"></a>
+
+</body>
+
+
+</html>

@@ -1,0 +1,39 @@
+@media (min-width:600px){ 
+    body{
+        zoom: 200%;
+    }
+}
+
+body {
+    background-image: url("../img/1a.jpg");
+    background-size:cover;
+}
+
+#logo {
+    text-align:center;
+    margin-top:20%;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #FFF;
+  padding-top: 125px;
+  font-size: 20px;
+  
+}
+
+#link{
+ text-decoration: none;  
+ border-style:solid;
+ border-radius:2px;
+ border-spacing: 28px 12px;
+ border-width:1px;
+ display:table;
+ margin:auto;
+ color:#F6F6F6;
+ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+}

@@ -1,0 +1,104 @@
+<! DOCTYPE html>
+<html>
+    <head>
+        <title>Input</title>
+        <link rel="stylesheet" href="css/input.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    
+   <body>
+       <h1>Connect</h1>
+       <p>Meet Your Mentors Now</p>
+   
+        <script type="text/javascript">
+         
+            function sendMail() {
+       
+        
+            console.log('sending');  
+             var message_entered =  document.getElementById("user_input").value;
+             var message_entered2 = document.getElementById("user_input2").value;
+             var message_entered3 = document.getElementById("user_input3").value;
+             var message_entered4 = document.getElementById("user_input4").value;
+             var message_entered5 = document.getElementById("user_input5").value;
+             var message_entered6 = document.getElementById("user_input6").value;
+             
+           
+             
+             var results = "First Name: " + message_entered + " Last name " + message_entered2 + " Grade: " +  message_entered3 + " School: " + message_entered4 + " Email: " +  message_entered5 + " Dream Field: "+ message_entered6;
+             
+        
+                $.ajax({
+                type: 'POST',
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                data: {
+                    'key': '9oXOGZkLBP25tMRHqB16ZQ',
+                    'message': {
+                    'from_email': message_entered5,
+                    'to': [
+                        {
+                            'email': 'whzengster@gmail.com',
+                            'name': 'Tempus',
+                            'type': 'to'
+                        }
+                        ],
+                    'autotext': 'true',
+                    'subject': 'Results',
+                    'html': results
+                    }
+                }
+                }).done(function(response) {
+                    console.log(response); // if you're into that sorta thing
+                });
+        }
+           
+        </script>
+        
+        
+        
+    <form id="questions"  enctype="text/plain"> 
+        <div><input id="user_input"  type="text" name="firstname" placeholder="First Name" autofocus/><br></div> <!--- autofocus/ added on 2/18/2016 WHZ-->
+
+        <div><input id ="user_input2" type="text" name="lastname" placeholder="Last Name"><br></div>
+
+        <div><input id = "user_input3" type="text" name="grade" placeholder="Grade Level"><br></div> 
+
+        <div><input id = "user_input4" type="text" name="schoolname" placeholder="School Name"><br></div>
+
+        <div><input id= "user_input5"  type="email" name="email" placeholder="Email"><br>
+
+        <div><select id = user_input6 >
+    
+        <option value="" disabled selected>#FindYourDream</option>
+        <option value="Agriculture,Food and Natural Resources">Agriculture,Food and Natural Resources</option>
+        <option value="Architecture and Construction">Architecture and Construction</option>
+        <option value="Arts, Audio/Video Technology and Communications">Arts, Audio/Video Technology and Communications</option>
+        <option value="Business Management and Administration">Business Management and Administration</option>
+        <option value="Education and Training">Education and Training</option>
+        <option value="Finance">Finance</option>
+        <option value="Health Science">Health Science</option>
+        <option value="Hospitality and Tourism">Hospitality and Tourism</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Law, Public Safety, Corrections and Security">Law, Public Safety, Corrections and Security</option>
+        <option value="Design">Design</option>
+        <option value="Marketing, Sales and Service">Marketing, Sales and Service</option>
+        <option value="Science, Technology, Engineering and Mathematics">Science, Technology, Engineering and Mathematics</option>
+          </select>
+    <br></div>
+    
+    </form> 
+ 
+    <form action="mentor.html">
+         <input onclick="sendMail()" type="submit" value="Submit">
+      </form>   
+ 
+ 
+    <a href="home.html"><img src="icon.png" height="42" width="42"></a>
+ 
+   </body>
+        
+    
+</html>

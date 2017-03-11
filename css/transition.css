@@ -1,0 +1,72 @@
+@media (min-width:600px){ 
+    body{
+        zoom: 200%;
+    }
+}
+
+#transition {
+  font-family: 'Raleway', sans-serif;
+  margin:auto;
+  margin-top: 150px;
+  text-align: center;
+}
+
+body {
+ background-image: url("../img/5.jpg");
+ background-size:cover;
+ /**background-color:#92DCE0;**/
+}
+
+body {
+  font-weight: normal;
+}
+
+#link{
+ text-decoration: none;  
+ border-style:solid;
+ border-radius:2px;
+ border-spacing: 35px 12px;
+ border-width:1px;
+ display:table;
+ margin:auto;
+ color:#F6F6F6;
+ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+a:active {
+  background-color:transparent;
+}
+
+#transition h1 {
+    
+  font-weight: lighter;
+  color: #F6F6F6;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#transition h3 {
+  font-weight: lighter;
+  color: #d3d3d3;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+#transition h4 {
+  font-weight: bold;
+  color: #F6F6F6;
+  padding-top: 125px;
+  font-size: 16px;
+  
+}
+
+img {
+  position: fixed;
+	bottom: 0%;
+	left: 0;
+    opacity:0.75;
+    
+}

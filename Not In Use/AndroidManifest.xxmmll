@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <manifest android:versionCode="13425" android:versionName="2.1"     android:windowSoftInputMode="adjustPan" android:installLocation="internalOnly" package="com.QSPV78GLVZ.eQuest2"
+ xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <uses-sdk android:minSdkVersion="7"
+android:targetSdkVersion="17"  />
+    <compatible-screens>
+        <!--no small size screens -->
+
+        <!--all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+
+        <!-- all large size screens -->
+        <screen android:screenSize="large" android:screenDensity="ldpi" />
+        <screen android:screenSize="large" android:screenDensity="mdpi" />
+        <screen android:screenSize="large" android:screenDensity="hdpi" />
+        <screen android:screenSize="large" android:screenDensity="xhdpi" />
+
+        <!-- all xlarge size screens -->
+        <screen android:screenSize="xlarge" android:screenDensity="ldpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+
+        <!-- Special case for Nexus 7 -->
+        <screen android:screenSize="large" android:screenDensity="213" />
+    </compatible-screens>
+
+</manifest>

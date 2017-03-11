@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Categories</title>
+  <link rel="stylesheet" href="css/categories.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+</head>
+<script type="text/javascript">
+function information(id) {
+    console.log(id)
+    
+
+     window.sessionStorage.setItem("job", id);
+    window.location= "information.html";
+}
+</script>
+
+<body>
+    <h1>#FindYourDream</h1>
+    
+    <ul>
+       <li>
+           <button  id="AGRI" class="fields" onClick="information(this.id)">Agriculture,Food and Natural Resources</button>
+       </li>
+       
+       <li>
+            <button id="ARCHITEC" class="fields" onClick="information(this.id)">Architecture and Construction</button>
+       </li>
+        
+       <li>
+            <button id="ARTS" class="fields" onClick="information(this.id)">Arts, Audio/Video Technology and Communications</button>
+       </li>
+        
+       <li>
+            <button id="BUSINESS" class="fields" onClick="information(this.id)">Business Management and Administration</button>
+       </li>
+        
+       <li>
+            <button id="EDUCATION" class="fields" onClick="information(this.id)">Education and Training</button>
+       </li>
+        
+       <li>
+            <button id="FINANCE" class="fields" onClick="information(this.id)">Finance</button>
+       </li>
+        
+        <li>
+            <button id="HEALTH" class="fields" onClick="information(this.id)">Health Science</button>
+        </li>
+        
+        <li>
+            <button id="HOSPITALITY" class="fields" onClick="information(this.id)">Hospitality and Tourism</button>
+        </li>
+        
+        <li>
+            <button id="INFOTECH" class="fields" onClick="information(this.id)">Information Technology</button>
+        </li>
+        
+        <li>
+            <button id="GOVERNMENT" class="fields" onClick="information(this.id)">Law, Public Safety, Corrections and Security</button>
+        </li>
+        
+        <li>
+            <button id="DESIGN" class="fields" onClick="information(this.id)">Design</button>
+        </li>
+        
+        <li>
+            <button id="MARKETING" class="fields" onClick="information(this.id)">Marketing, Sales and Service</button>
+        </li>
+        
+        <li>
+            <button id="TECH" class="fields" onClick="information(this.id)">Science, Technology, Engineering and Mathematics</button>
+       </li>
+       
+    </ul>
+    
+    <div> <!---Made for the background--->
+    </div>
+    
+    <a href="home.html"><img src="icon.png" height="42" width="42"></a>
+    
+</body>
+
+</html>
